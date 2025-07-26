@@ -4,7 +4,7 @@ param adminUsername string = 'azureuser'
 
 @description('Password for the Virtual Machine administrator')
 @secure()
-param adminPassword string
+param adminPassword string = 'BigPassword123!'
 
 @description('Location for all resources')
 param location string = 'eastus'
@@ -75,7 +75,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2024-11-01' = {
       osDisk: {
         createOption: 'FromImage'
         managedDisk: {
-          storageAccountType: 'Premium_LRS'
+          storageAccountType: 'Standard_LRS'
         }
       }
     }
