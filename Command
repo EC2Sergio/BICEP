@@ -1,0 +1,1 @@
+New-AzResourceGroupDeployment -Name "First" -ResourceGroupName "FirstBicep" -TemplateFile .\main.bicep
